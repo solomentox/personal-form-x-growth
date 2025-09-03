@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client's Personal Brand Intake Form (X / Twitter)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #1f1f1f;
+            color: #e3e3e3;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            margin-bottom: 40px;
+        }
+
+        .header-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .welcome {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #a3a3a3;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .warning-banner {
+            background-color: rgba(185, 28, 28, 0.2);
+            border: 1px solid rgba(185, 28, 28, 0.3);
+            color: #f87171;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+            background-color: #2a2a2a;
+            border: 1px solid #3a3a3a;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        input[type="text"],
+        input[type="url"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px 16px;
+            background-color: #1f1f1f;
+            border: 1px solid #3a3a3a;
+            border-radius: 6px;
+            color: #e3e3e3;
+            font-size: 15px;
+            font-family: inherit;
+            transition: border-color 0.2s, background-color 0.2s;
+        }
+
+        input[type="text"]:hover,
+        input[type="url"]:hover,
+        input[type="email"]:hover,
+        textarea:hover {
+            background-color: #252525;
+            border-color: #4a4a4a;
+        }
+
+        input[type="text"]:focus,
+        input[type="url"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #5a5aff;
+            background-color: #252525;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #6a6a6a;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #4a4aff;
+            color: white;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background-color: #3a3aee;
+        }
+
+        .submit-btn:disabled {
+            background-color: #3a3a3a;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 10px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .form-group {
+                padding: 15px;
+            }
+        }
+
+        #result {
+            text-align: center;
+            font-size: 16px;
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .text-green-500 {
+            color: #10b981;
+            background-color: rgba(16, 185, 129, 0.1);
+        }
+
+        .text-red-500 {
+            color: #ef4444;
+            background-color: rgba(239, 68, 68, 0.1);
+        }
+
+        .text-gray-400 {
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-icon">📝</div>
+            <h1>Client's Personal Brand Intake Form (X / Twitter)</h1>
+            <p class="welcome">Welcome!</p>
+            <p class="description">Please fill in this form so we can fully understand your brand, audience, and goals.</p>
+            <p class="description">This will help us create viral, lead-generating content tailored to your voice & brand.</p>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" id="form">
+            <input type="hidden" name="access_key" value="dfde76ce-726c-42ce-8408-df1a7eb77917" />
+            <input type="hidden" name="subject" value="New Client Personal Brand Intake Form Submission" />
+            <input type="checkbox" name="botcheck" id="" style="display: none;" />
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Respondent's answer" required>
+            </div>
+
+            <div class="form-group">
+                <label for="companyPosition">Company Name / Position:</label>
+                <input type="text" id="companyPosition" name="companyPosition" placeholder="Respondent's answer">
+            </div>
+
+            <div class="form-group">
+                <label for="website">Website:</label>
+                <input type="text" id="website" name="website" placeholder="Respondent's answer">
+            </div>
+
+            <div class="form-group">
+                <label for="socialHandles">Social Handles (X, LinkedIn, etc.):</label>
+                <input type="text" id="socialHandles" name="socialHandles" placeholder="Respondent's answer">
+            </div>
+
+            <div class="form-group">
+                <label for="preferredContact">Preferred Contact (WhatsApp / Telegram):</label>
+                <input type="text" id="preferredContact" name="preferredContact" placeholder="Respondent's answer">
+            </div>
+
+            <div class="form-group">
+                <label for="idealClient">Who is your ideal client/customer?</label>
+                <textarea id="idealClient" name="idealClient" placeholder="Respondent's answer"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="painPoints">What are their pain points and desires?</label>
+                <textarea id="painPoints" name="painPoints" placeholder="Respondent's answer"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="objections">What are their common objections before buying from you?</label>
+                <textarea id="objections" name="objections" placeholder="Respondent's answer"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="personality">Describe your personality in 3-5 words:</label>
+                <textarea id="personality" name="personality" placeholder="Respondent's answer"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="avoidTopics">Any words, tones, or topics to avoid?</label>
+                <textarea id="avoidTopics" name="avoidTopics" placeholder="Respondent's answer"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="mainProduct">What's your main product/service?</label>
+                <textarea id="mainProduct" name="mainProduct" placeholder="Respondent's answer"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="pricing">Pricing / package details (if public):</label>
+                <textarea id="pricing" name="pricing" placeholder="Respondent's answer"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="mainCTA">What's your main Call-to-Action (CTA)?</label>
+                <textarea id="mainCTA" name="mainCTA" placeholder="Respondent's answer"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="salesFunnel">Do you have a sales funnel in place? (yes/no + short description)</label>
+                <textarea id="salesFunnel" name="salesFunnel" placeholder="Respondent's answer"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="personalStories">Do you have personal stories, client wins, or case studies we can use?</label>
+                <textarea id="personalStories" name="personalStories" placeholder="Respondent's answer"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="frameworks">Any specific frameworks, expertise, or insights you want highlighted?</label>
+                <textarea id="frameworks" name="frameworks" placeholder="Respondent's answer"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="competitors">Who are your top 3 competitors or inspirations?</label>
+                <textarea id="competitors" name="competitors" placeholder="Respondent's answer"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="engagement">Do you want us to engage (replies/comments) on your behalf?</label>
+                <textarea id="engagement" name="engagement" placeholder="Respondent's answer"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="additionalInfo">Anything else we should know before we start?</label>
+                <textarea id="additionalInfo" name="additionalInfo" placeholder="Respondent's answer"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="funnelLinks">Funnel/landing page links</label>
+                <textarea id="funnelLinks" name="funnelLinks" placeholder="Respondent's answer"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Notes, interviews, anything that helps to understand your persona</label>
+                <textarea id="notes" name="notes" placeholder="Respondent's answer"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn" disabled>Submit Form</button>
+            <p id="result"></p>
+        </form>
+    </div>
+    <script>
+        // Form validation
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('form');
+            const submitBtn = document.querySelector('.submit-btn');
+            
+            // Get all input and textarea fields (excluding hidden inputs)
+            const inputs = form.querySelectorAll('input[type="text"], input[type="url"], textarea');
+            
+            // Function to check if all fields are filled
+            function validateForm() {
+                let allFieldsFilled = true;
+                
+                inputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        allFieldsFilled = false;
+                    }
+                });
+                
+                // Enable/disable submit button based on validation
+                submitBtn.disabled = !allFieldsFilled;
+            }
+            
+            // Add event listeners to all fields
+            inputs.forEach(input => {
+                input.addEventListener('input', validateForm);
+                input.addEventListener('blur', validateForm);
+            });
+            
+            // Initial validation check
+            validateForm();
+        });
+    </script>
+    <script src="form.js"></script>
+</body>
+</html>
