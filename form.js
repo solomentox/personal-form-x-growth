@@ -6,8 +6,23 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
   var object = {};
   formData.forEach((value, key) => {
-    object[key] = value;
+    // Handle checkbox arrays
+    if (key === 'socialPlatforms') {
+      if (object[key]) {
+        object[key] = Array.isArray(object[key]) ? [...object[key], value] : [object[key], value];
+      } else {
+        object[key] = [value];
+      }
+    } else {
+      object[key] = value;
+    }
   });
+  
+  // Convert checkbox arrays to comma-separated strings for cleaner output
+  if (object.socialPlatforms && Array.isArray(object.socialPlatforms)) {
+    object.socialPlatforms = object.socialPlatforms.join(', ');
+  }
+  
   var json = JSON.stringify(object);
   result.innerHTML = "Please wait...";
 

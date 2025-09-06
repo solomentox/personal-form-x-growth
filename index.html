@@ -3,303 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client's Personal Brand Intake Form (X / Twitter)</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background-color: #1f1f1f;
-            color: #e3e3e3;
-            line-height: 1.6;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .header {
-            margin-bottom: 40px;
-        }
-
-        .header-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 36px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-
-        .welcome {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: #ffffff;
-        }
-
-        .description {
-            font-size: 16px;
-            color: #a3a3a3;
-            margin-bottom: 10px;
-            line-height: 1.5;
-        }
-
-        .warning-banner {
-            background-color: rgba(185, 28, 28, 0.2);
-            border: 1px solid rgba(185, 28, 28, 0.3);
-            color: #f87171;
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            font-size: 15px;
-        }
-
-        .form-group {
-            margin-bottom: 30px;
-            background-color: #2a2a2a;
-            border: 1px solid #3a3a3a;
-            border-radius: 8px;
-            padding: 20px;
-        }
-
-        label {
-            display: block;
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 12px;
-            color: #ffffff;
-        }
-
-        input[type="text"],
-        input[type="url"],
-        input[type="email"],
-        textarea {
-            width: 100%;
-            padding: 12px 16px;
-            background-color: #1f1f1f;
-            border: 1px solid #3a3a3a;
-            border-radius: 6px;
-            color: #e3e3e3;
-            font-size: 15px;
-            font-family: inherit;
-            transition: border-color 0.2s, background-color 0.2s;
-        }
-
-        input[type="text"]:hover,
-        input[type="url"]:hover,
-        input[type="email"]:hover,
-        textarea:hover {
-            background-color: #252525;
-            border-color: #4a4a4a;
-        }
-
-        input[type="text"]:focus,
-        input[type="url"]:focus,
-        input[type="email"]:focus,
-        textarea:focus {
-            outline: none;
-            border-color: #5a5aff;
-            background-color: #252525;
-        }
-
-        input::placeholder,
-        textarea::placeholder {
-            color: #6a6a6a;
-        }
-
-        textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background-color: #4a4aff;
-            color: white;
-            padding: 14px 32px;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.2s;
-            margin-top: 20px;
-        }
-
-        .submit-btn:hover {
-            background-color: #3a3aee;
-        }
-
-        .submit-btn:disabled {
-            background-color: #3a3a3a;
-            cursor: not-allowed;
-            opacity: 0.5;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px 10px;
-            }
-
-            h1 {
-                font-size: 28px;
-            }
-
-            .form-group {
-                padding: 15px;
-            }
-        }
-
-        #result {
-            text-align: center;
-            font-size: 16px;
-            margin-top: 20px;
-            padding: 12px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-        .text-green-500 {
-            color: #10b981;
-            background-color: rgba(16, 185, 129, 0.1);
-        }
-
-        .text-red-500 {
-            color: #ef4444;
-            background-color: rgba(239, 68, 68, 0.1);
-        }
-
-        .text-gray-400 {
-            color: #9ca3af;
-        }
-    </style>
+    <title>Personal Brand Intake Form | The Great Randomizer</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="header-icon">📝</div>
-            <h1>Client's Personal Brand Intake Form (X / Twitter)</h1>
-            <p class="welcome">Welcome!</p>
-            <p class="description">Please fill in this form so we can fully understand your brand, audience, and goals.</p>
-            <p class="description">This will help us create viral, lead-generating content tailored to your voice & brand.</p>
+            <div class="logo-section">
+                <img src="randomizer-logo.svg" alt="The Great Randomizer" class="logo">
+                <div class="branding">
+                    
+                    <h2 class="company-name">The Great Randomizer</h2>
+                    <p class="tagline">360<sup>°</sup> social media marketing for personal brand</p>
+                </div>
+            </div>
+            <h1>Personal Brand Intake Form</h1>
+            <p class="description">Takes ~5 minutes to complete. Fields marked with <span class="required-mark">*</span> are required.</p>
+        </div>
+
+        <!-- Progress bar -->
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
         </div>
 
         <form action="https://api.web3forms.com/submit" method="POST" id="form">
             <input type="hidden" name="access_key" value="dfde76ce-726c-42ce-8408-df1a7eb77917" />
             <input type="hidden" name="subject" value="New Client Personal Brand Intake Form Submission" />
-            <input type="checkbox" name="botcheck" id="" style="display: none;" />
-            <div class="form-group">
-                <label for="fullName">Full Name:</label>
-                <input type="text" id="fullName" name="fullName" placeholder="Respondent's answer" required>
+            <input type="checkbox" name="botcheck" id="" class="hidden" />
+            
+            <!-- SECTION 1: Basic Information -->
+            <div class="form-section">
+                <h3 class="section-title">1. Basic Information</h3>
+                
+                <div class="form-group">
+                    <label for="fullName">Full Name <span class="required-mark">*</span></label>
+                    <input type="text" id="fullName" name="fullName" placeholder="John Smith" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span class="required-mark">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="companyPosition">Company Name / Position <span class="optional-tag">(optional)</span></label>
+                    <input type="text" id="companyPosition" name="companyPosition" placeholder="CEO at Acme Corp">
+                </div>
+
+                <div class="form-group">
+                    <label for="website">Website <span class="optional-tag">(optional)</span></label>
+                    <input type="url" id="website" name="website" placeholder="https://example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="preferredContact">Preferred Contact Method <span class="required-mark">*</span></label>
+                    <select id="preferredContact" name="preferredContact" required>
+                        <option value="">Select preferred contact</option>
+                        <option value="email">Email</option>
+                        <option value="whatsapp">WhatsApp</option>
+                        <option value="telegram">Telegram</option>
+                    </select>
+                    <input type="text" id="contactDetails" name="contactDetails" placeholder="Phone number or username" class="contact-details">
+                </div>
+
+                <div class="form-group">
+                    <label for="timeline">When would you like to start? <span class="required-mark">*</span></label>
+                    <select id="timeline" name="timeline" required>
+                        <option value="">Select timeline</option>
+                        <option value="immediately">Immediately</option>
+                        <option value="week">Within a week</option>
+                        <option value="month">Within a month</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="companyPosition">Company Name / Position:</label>
-                <input type="text" id="companyPosition" name="companyPosition" placeholder="Respondent's answer">
+            <!-- SECTION 2: Platforms & Goals -->
+            <div class="form-section">
+                <h3 class="section-title">2. Platforms & Goals</h3>
+                
+                <div class="form-group">
+                    <label>Which platforms should we focus on? <span class="required-mark">*</span></label>
+                    <p class="helper-text">Select all that apply</p>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="socialX" name="socialPlatforms" value="X">
+                            <label for="socialX" class="checkbox-label">𝕏 (Twitter)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="socialLinkedin" name="socialPlatforms" value="LinkedIn">
+                            <label for="socialLinkedin" class="checkbox-label">LinkedIn</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="socialInstagram" name="socialPlatforms" value="Instagram">
+                            <label for="socialInstagram" class="checkbox-label">Instagram</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="socialYoutube" name="socialPlatforms" value="YouTube">
+                            <label for="socialYoutube" class="checkbox-label">YouTube</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="socialTiktok" name="socialPlatforms" value="TikTok">
+                            <label for="socialTiktok" class="checkbox-label">TikTok</label>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="website">Website:</label>
-                <input type="text" id="website" name="website" placeholder="Respondent's answer">
+            <!-- SECTION 3: Your Business -->
+            <div class="form-section">
+                <h3 class="section-title">3. Your Business</h3>
+                
+                <div class="form-group">
+                    <label for="mainProduct">What's your main product/service? <span class="required-mark">*</span></label>
+                    <textarea id="mainProduct" name="mainProduct" placeholder="Briefly describe what you offer" required maxlength="200"></textarea>
+                    <span class="char-count">0/200</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="mainCTA">What's your main Call-to-Action? <span class="required-mark">*</span></label>
+                    <input type="text" id="mainCTA" name="mainCTA" placeholder="e.g., Book a Call, Download Guide, Buy Now" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pricing">Pricing/packages <span class="optional-tag">(optional - only if public)</span></label>
+                    <textarea id="pricing" name="pricing" placeholder="Share if you want us to mention pricing"></textarea>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="socialHandles">Social Handles (X, LinkedIn, etc.):</label>
-                <input type="text" id="socialHandles" name="socialHandles" placeholder="Respondent's answer">
+            <!-- SECTION 4: Target Audience -->
+            <div class="form-section">
+                <h3 class="section-title">4. Target Audience</h3>
+                
+                <div class="form-group">
+                    <label for="idealClient">Who is your ideal client? <span class="required-mark">*</span></label>
+                    <textarea id="idealClient" name="idealClient" placeholder="e.g., B2B SaaS founders, E-commerce store owners, etc." required maxlength="300"></textarea>
+                    <span class="char-count">0/300</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="painPoints">Their main pain points & desires? <span class="required-mark">*</span></label>
+                    <textarea id="painPoints" name="painPoints" placeholder="What problems do you solve for them?" required maxlength="300"></textarea>
+                    <span class="char-count">0/300</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="objections">Common objections <span class="optional-tag">(optional)</span></label>
+                    <textarea id="objections" name="objections" placeholder="What stops them from buying?"></textarea>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="preferredContact">Preferred Contact (WhatsApp / Telegram):</label>
-                <input type="text" id="preferredContact" name="preferredContact" placeholder="Respondent's answer">
+            <!-- SECTION 5: Brand Voice & Style -->
+            <div class="form-section">
+                <h3 class="section-title">5. Brand Voice & Style</h3>
+                
+                <div class="form-group">
+                    <label for="personality">Your brand personality in 3-5 words <span class="required-mark">*</span></label>
+                    <input type="text" id="personality" name="personality" placeholder="e.g., Professional, Friendly, Innovative" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contentThemes">Content themes/topics to focus on <span class="required-mark">*</span></label>
+                    <textarea id="contentThemes" name="contentThemes" placeholder="e.g., Leadership, AI tools, Marketing tips" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="avoidTopics">Topics/tones to avoid <span class="optional-tag">(optional)</span></label>
+                    <textarea id="avoidTopics" name="avoidTopics" placeholder="e.g., Politics, Controversial topics, Slang"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="engagement">Engagement preference <span class="required-mark">*</span></label>
+                    <select id="engagement" name="engagement" required>
+                        <option value="">Select preference</option>
+                        <option value="full">Yes, reply and engage fully</option>
+                        <option value="approval">Yes, but run by me first</option>
+                        <option value="none">No, post only</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="idealClient">Who is your ideal client/customer?</label>
-                <textarea id="idealClient" name="idealClient" placeholder="Respondent's answer"></textarea>
-            </div>
+            <!-- SECTION 6: Additional Information (Optional) -->
+            <div class="form-section">
+                <h3 class="section-title">6. Additional Information <span class="optional-tag">(all optional)</span></h3>
+                
+                <div class="form-group">
+                    <label for="salesFunnel">Sales funnel description</label>
+                    <textarea id="salesFunnel" name="salesFunnel" placeholder="Describe if you have one"></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="painPoints">What are their pain points and desires?</label>
-                <textarea id="painPoints" name="painPoints" placeholder="Respondent's answer"></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="personalStories">Success stories or case studies</label>
+                    <textarea id="personalStories" name="personalStories" placeholder="Share any wins we can reference"></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="objections">What are their common objections before buying from you?</label>
-                <textarea id="objections" name="objections" placeholder="Respondent's answer"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="personality">Describe your personality in 3-5 words:</label>
-                <textarea id="personality" name="personality" placeholder="Respondent's answer"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="avoidTopics">Any words, tones, or topics to avoid?</label>
-                <textarea id="avoidTopics" name="avoidTopics" placeholder="Respondent's answer"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="mainProduct">What's your main product/service?</label>
-                <textarea id="mainProduct" name="mainProduct" placeholder="Respondent's answer"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="pricing">Pricing / package details (if public):</label>
-                <textarea id="pricing" name="pricing" placeholder="Respondent's answer"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="mainCTA">What's your main Call-to-Action (CTA)?</label>
-                <textarea id="mainCTA" name="mainCTA" placeholder="Respondent's answer"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="salesFunnel">Do you have a sales funnel in place? (yes/no + short description)</label>
-                <textarea id="salesFunnel" name="salesFunnel" placeholder="Respondent's answer"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="personalStories">Do you have personal stories, client wins, or case studies we can use?</label>
-                <textarea id="personalStories" name="personalStories" placeholder="Respondent's answer"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="frameworks">Any specific frameworks, expertise, or insights you want highlighted?</label>
-                <textarea id="frameworks" name="frameworks" placeholder="Respondent's answer"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="competitors">Who are your top 3 competitors or inspirations?</label>
-                <textarea id="competitors" name="competitors" placeholder="Respondent's answer"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="engagement">Do you want us to engage (replies/comments) on your behalf?</label>
-                <textarea id="engagement" name="engagement" placeholder="Respondent's answer"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="additionalInfo">Anything else we should know before we start?</label>
-                <textarea id="additionalInfo" name="additionalInfo" placeholder="Respondent's answer"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="funnelLinks">Funnel/landing page links</label>
-                <textarea id="funnelLinks" name="funnelLinks" placeholder="Respondent's answer"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="notes">Notes, interviews, anything that helps to understand your persona</label>
-                <textarea id="notes" name="notes" placeholder="Respondent's answer"></textarea>
+                <div class="form-group">
+                    <label for="additionalInfo">Anything else we should know?</label>
+                    <textarea id="additionalInfo" name="additionalInfo" placeholder="Any other important details"></textarea>
+                </div>
             </div>
 
             <button type="submit" class="submit-btn" disabled>Submit Form</button>
@@ -307,35 +211,97 @@
         </form>
     </div>
     <script>
-        // Form validation
+        // Enhanced form validation with progress tracking
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('form');
             const submitBtn = document.querySelector('.submit-btn');
+            const progressBar = document.getElementById('progressBar');
             
-            // Get all input and textarea fields (excluding hidden inputs)
-            const inputs = form.querySelectorAll('input[type="text"], input[type="url"], textarea');
+            // Get required fields only
+            const requiredInputs = form.querySelectorAll('input[required], textarea[required], select[required]');
+            const checkboxes = form.querySelectorAll('input[type="checkbox"][name="socialPlatforms"]');
             
-            // Function to check if all fields are filled
-            function validateForm() {
-                let allFieldsFilled = true;
+            // Character counter for textareas with maxlength
+            document.querySelectorAll('textarea[maxlength]').forEach(textarea => {
+                const counter = textarea.parentElement.querySelector('.char-count');
+                if (counter) {
+                    textarea.addEventListener('input', () => {
+                        counter.textContent = `${textarea.value.length}/${textarea.maxLength}`;
+                    });
+                }
+            });
+            
+            // Progress tracking
+            function updateProgress() {
+                let filledCount = 0;
+                let totalRequired = requiredInputs.length + 1; // +1 for checkbox group
                 
-                inputs.forEach(input => {
-                    if (!input.value.trim()) {
-                        allFieldsFilled = false;
+                requiredInputs.forEach(input => {
+                    if (input.value.trim()) {
+                        filledCount++;
                     }
                 });
                 
-                // Enable/disable submit button based on validation
-                submitBtn.disabled = !allFieldsFilled;
+                // Check if at least one checkbox is selected
+                const checkboxChecked = Array.from(checkboxes).some(cb => cb.checked);
+                if (checkboxChecked) {
+                    filledCount++;
+                }
+                
+                const progress = (filledCount / totalRequired) * 100;
+                progressBar.style.width = `${progress}%`;
+                
+                return filledCount === totalRequired;
             }
             
-            // Add event listeners to all fields
-            inputs.forEach(input => {
+            // Validation function
+            function validateForm() {
+                const allRequiredFilled = updateProgress();
+                submitBtn.disabled = !allRequiredFilled;
+            }
+            
+            // Add event listeners to required fields
+            requiredInputs.forEach(input => {
                 input.addEventListener('input', validateForm);
                 input.addEventListener('blur', validateForm);
             });
             
-            // Initial validation check
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', validateForm);
+            });
+            
+            // Auto-save to localStorage
+            form.querySelectorAll('input:not([type="hidden"]), textarea, select').forEach(field => {
+                // Load saved data
+                const savedValue = localStorage.getItem(`intake_${field.name}`);
+                if (savedValue && field.type !== 'checkbox') {
+                    field.value = savedValue;
+                } else if (savedValue && field.type === 'checkbox') {
+                    field.checked = savedValue === 'true';
+                }
+                
+                // Save on change
+                field.addEventListener('input', () => {
+                    localStorage.setItem(`intake_${field.name}`, field.type === 'checkbox' ? field.checked : field.value);
+                });
+                
+                field.addEventListener('change', () => {
+                    localStorage.setItem(`intake_${field.name}`, field.type === 'checkbox' ? field.checked : field.value);
+                });
+            });
+            
+            // Clear localStorage on successful submit
+            form.addEventListener('submit', () => {
+                setTimeout(() => {
+                    for (let key in localStorage) {
+                        if (key.startsWith('intake_')) {
+                            localStorage.removeItem(key);
+                        }
+                    }
+                }, 1000);
+            });
+            
+            // Initial validation
             validateForm();
         });
     </script>
