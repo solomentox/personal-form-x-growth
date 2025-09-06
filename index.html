@@ -18,11 +18,9 @@
                 <div class="branding">
                     
                     <h2 class="company-name">The Great Randomizer</h2>
-                    <p class="tagline">360<sup>°</sup> social media marketing for personal brand</p>
+                    <p class="tagline">360<sup>°</sup> social media marketing agency tailored for personal brand</p>
                 </div>
             </div>
-            <h1>Personal Brand Intake Form</h1>
-            <p class="description">Takes ~5 minutes to complete. Fields marked with <span class="required-mark">*</span> are required.</p>
         </div>
 
         <!-- Progress bar -->
@@ -31,7 +29,7 @@
         </div>
 
         <form action="https://api.web3forms.com/submit" method="POST" id="form">
-            <input type="hidden" name="access_key" value="dfde76ce-726c-42ce-8408-df1a7eb77917" />
+            <input type="hidden" name="access_key" value="d8e1c044-ee93-41b3-afd2-871b6df9bd2c" />
             <input type="hidden" name="subject" value="New Client Personal Brand Intake Form Submission" />
             <input type="checkbox" name="botcheck" id="" class="hidden" />
             
@@ -78,38 +76,6 @@
                         <option value="week">Within a week</option>
                         <option value="month">Within a month</option>
                     </select>
-                </div>
-            </div>
-
-            <!-- SECTION 2: Platforms & Goals -->
-            <div class="form-section">
-                <h3 class="section-title">2. Platforms & Goals</h3>
-                
-                <div class="form-group">
-                    <label>Which platforms should we focus on? <span class="required-mark">*</span></label>
-                    <p class="helper-text">Select all that apply</p>
-                    <div class="checkbox-group">
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="socialX" name="socialPlatforms" value="X">
-                            <label for="socialX" class="checkbox-label">𝕏 (Twitter)</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="socialLinkedin" name="socialPlatforms" value="LinkedIn">
-                            <label for="socialLinkedin" class="checkbox-label">LinkedIn</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="socialInstagram" name="socialPlatforms" value="Instagram">
-                            <label for="socialInstagram" class="checkbox-label">Instagram</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="socialYoutube" name="socialPlatforms" value="YouTube">
-                            <label for="socialYoutube" class="checkbox-label">YouTube</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="socialTiktok" name="socialPlatforms" value="TikTok">
-                            <label for="socialTiktok" class="checkbox-label">TikTok</label>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -217,9 +183,9 @@
             const submitBtn = document.querySelector('.submit-btn');
             const progressBar = document.getElementById('progressBar');
             
-            // Get required fields only
+            // Get all form fields for progress tracking (excluding hidden inputs)
+            const allFormFields = form.querySelectorAll('input:not([type="hidden"]):not([name="botcheck"]), textarea, select');
             const requiredInputs = form.querySelectorAll('input[required], textarea[required], select[required]');
-            const checkboxes = form.querySelectorAll('input[type="checkbox"][name="socialPlatforms"]');
             
             // Character counter for textareas with maxlength
             document.querySelectorAll('textarea[maxlength]').forEach(textarea => {
@@ -231,27 +197,29 @@
                 }
             });
             
-            // Progress tracking
+            // Progress tracking for all fields
             function updateProgress() {
                 let filledCount = 0;
-                let totalRequired = requiredInputs.length + 1; // +1 for checkbox group
+                const totalFields = allFormFields.length;
                 
-                requiredInputs.forEach(input => {
-                    if (input.value.trim()) {
+                allFormFields.forEach(field => {
+                    if (field.value.trim()) {
                         filledCount++;
                     }
                 });
                 
-                // Check if at least one checkbox is selected
-                const checkboxChecked = Array.from(checkboxes).some(cb => cb.checked);
-                if (checkboxChecked) {
-                    filledCount++;
-                }
-                
-                const progress = (filledCount / totalRequired) * 100;
+                const progress = (filledCount / totalFields) * 100;
                 progressBar.style.width = `${progress}%`;
                 
-                return filledCount === totalRequired;
+                // Return true if all required fields are filled (for submit button)
+                let requiredFilled = 0;
+                requiredInputs.forEach(input => {
+                    if (input.value.trim()) {
+                        requiredFilled++;
+                    }
+                });
+                
+                return requiredFilled === requiredInputs.length;
             }
             
             // Validation function
@@ -260,14 +228,11 @@
                 submitBtn.disabled = !allRequiredFilled;
             }
             
-            // Add event listeners to required fields
-            requiredInputs.forEach(input => {
-                input.addEventListener('input', validateForm);
-                input.addEventListener('blur', validateForm);
-            });
-            
-            checkboxes.forEach(checkbox => {
-                checkbox.addEventListener('change', validateForm);
+            // Add event listeners to all form fields for progress tracking
+            allFormFields.forEach(field => {
+                field.addEventListener('input', validateForm);
+                field.addEventListener('change', validateForm);
+                field.addEventListener('blur', validateForm);
             });
             
             // Auto-save to localStorage

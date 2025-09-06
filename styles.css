@@ -62,6 +62,7 @@ body {
     justify-content: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
+    flex-direction: column;
 }
 
 .logo {
@@ -71,20 +72,20 @@ body {
 }
 
 .branding {
-    text-align: left;
+    text-align: center;
 }
 
 .company-name {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 600;
     line-height: 1.2;
-    color: hsl(var(--foreground));
+    color: #FFEFD5;
     margin: 0;
     letter-spacing: -0.025em;
 }
 
 .tagline {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     color: hsl(var(--muted-foreground));
     margin: 0;
     font-weight: 400;
@@ -94,7 +95,7 @@ h1 {
     font-size: 1.6rem;
     font-weight: 400;
     margin-bottom: 0.2rem;
-    color: hsl(var(--heading-special));
+    color: rgb(255 244 209);
     letter-spacing: -0.025em;
     line-height: 1.2;
 }
@@ -280,12 +281,7 @@ input[type="checkbox"] {
     }
 
     .logo-section {
-        flex-direction: column;
         gap: 0.75rem;
-    }
-
-    .branding {
-        text-align: center;
     }
 
     .checkbox-group {
